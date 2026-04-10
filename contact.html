@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Bog'lanish</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme { --color-primary: #10b981; --color-bg-dark: #121212; --color-bg-panel: #1e1e1e; --color-border: #333333; }
+        body { background-color: var(--color-bg-dark); color: white; }
+        /* Skrollbarni chiroyli qilish */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen lg:h-screen lg:overflow-hidden">
+
+    <header class="h-16 border-b border-[var(--color-border)] flex items-center justify-between px-6 bg-[var(--color-bg-panel)] shrink-0 z-50 sticky top-0">
+        <img class="w-[100px]" src="FQQUe (1).jpg" alt="Logo">
+        <nav class="flex gap-4 md:gap-6 text-sm font-medium overflow-x-auto no-scrollbar whitespace-nowrap px-2">
+            <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Bosh sahifa</a>
+            <a href="about.html" class="text-gray-400 hover:text-white transition-colors">Haqida</a>
+            <a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Loyihalar</a>
+            <a href="contact.html" class="text-primary border-b-2 border-primary pb-1">Bog'lanish</a>
+        </nav>
+    </header>
+
+    <div class="flex flex-col lg:flex-row flex-1 lg:overflow-hidden">
+        
+        <aside class="w-full lg:w-[20%] lg:min-w-[280px] bg-[var(--color-bg-panel)] border-b lg:border-b-0 lg:border-r border-[var(--color-border)] overflow-y-auto p-5 shrink-0 flex flex-col gap-5 z-10">
+            <img src="pro_developer.jpg" alt="Profile" class="object-cover w-24 lg:w-full h-auto rounded-lg mx-auto lg:mx-0 border border-[var(--color-border)]">
+            <div class="text-center lg:text-left">
+                <h2 class="text-xl font-bold leading-tight">Sharipov Sunnatilla</h2>
+                <p class="text-primary text-[10px] font-bold uppercase mt-1">Frontend Developer</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center lg:justify-start gap-2 text-xs text-gray-300">
+                <span class="bg-[#2a2a2a] px-3 py-1.5 rounded-md border border-[#333] hover:bg-slate-600">Veb dasturchi</span>
+                <span class="bg-[#2a2a2a] px-3 py-1.5 rounded-md border border-[#333] hover:bg-slate-600">Dizayner</span>
+                <span class="bg-[#2a2a2a] px-3 py-1.5 rounded-md border border-[#333] hover:bg-slate-600">Junior</span>
+            </div>
+            
+            <hr class="border-[var(--color-border)] my-2">
+            
+            <div class="flex flex-col gap-4 text-sm">
+                <a href="mailto:sunnatillasharipov6@gmail.com" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-lg border border-[#333]">📧</div>
+                    <div class="truncate lg:w-auto">
+                        <div class="font-semibold text-gray-200">E-pochta</div>
+                        <div class="text-gray-400 text-[10px] truncate">sunnatillasharipov6@gmail.com</div>
+                    </div>
+                </a>
+                <a href="https://t.me/war1pov_developer" target="_blank" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors">
+                    <div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-lg border border-[#333]">✈️</div>
+                    <div>
+                        <div class="font-semibold text-gray-200">Telegram</div>
+                        <div class="text-gray-400 text-[10px]">@war1pov_developer</div>
+                    </div>
+                </a>
+                <a href="https://github.com/yaxyobekuz" target="_blank" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors -mx-2">
+                    <div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-lg shadow-sm border border-[#333]">💻</div>
+                    <div>
+                        <div class="font-semibold text-gray-200">Github</div>
+                        <div class="text-gray-400 text-xs mt-0.5">github.com/sunnatillacodder</div>
+                    </div>
+                </a>
+                 <a href="tel:+998200077729" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors -mx-2">
+                    <div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-lg shadow-sm border border-[#333]">📞</div>
+                    <div>
+                        <div class="font-semibold text-gray-200">Telefon raqam</div>
+                        <div class="text-gray-400 text-xs mt-0.5">+998 (95) 121-42-82</div>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="w-full lg:w-[80%] flex-1 overflow-y-auto p-6 md:p-10 lg:p-16">
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-10">
+                    <h1 class="font-bold text-[32px] border-b-4 border-primary w-fit pb-2">Bog'lanish</h1>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+                    <a href="mailto:sunnatillasharipov6@gmail.com" class="bg-[var(--color-bg-panel)] border border-[var(--color-border)] p-6 rounded-2xl flex flex-col items-center text-center gap-4 shadow-lg hover:border-primary hover:-translate-y-1 transition-all group">
+                        <div class="w-12 h-12 bg-zinc-800 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="w-6 h-6" alt="Gmail">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white">E-pochta</h3>
+                            <p class="text-gray-400 text-xs mt-1">sunnatillasharipov6@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="https://t.me/war1pov_developer" target="_blank" class="bg-[var(--color-bg-panel)] border border-[var(--color-border)] p-6 rounded-2xl flex flex-col items-center text-center gap-4 shadow-lg hover:border-primary hover:-translate-y-1 transition-all group">
+                        <div class="w-12 h-12 bg-zinc-800 rounded-xl flex items-center justify-center group-hover:bg-sky-500 transition-colors">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968804.png" class="w-6 h-6" alt="Telegram">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white">Telegram</h3>
+                            <p class="text-gray-400 text-xs mt-1">@war1pov_developer</p>
+                        </div>
+                    </a>
+
+                    <a href="tel:+998951214282" class="bg-[var(--color-bg-panel)] border border-[var(--color-border)] p-6 rounded-2xl flex flex-col items-center text-center gap-4 shadow-lg hover:border-primary hover:-translate-y-1 transition-all group">
+                        <div class="w-12 h-12 bg-zinc-800 rounded-xl flex items-center justify-center group-hover:bg-emerald-500 transition-colors">
+                            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" class="w-6 h-6" alt="Phone">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-sm lg:text-base">Telefon</h3>
+                            <p class="text-gray-400 text-xs mt-1">+998 (95) 121-42-82</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="font-bold text-[28px] border-b-4 border-primary w-fit pb-2">So'rov yuborish</h2>
+                </div>
+
+                <form class="bg-[var(--color-bg-panel)] border border-[var(--color-border)] p-6 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden mb-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 relative z-10">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-medium text-gray-400 ml-1">Ismingiz</label>
+                            <input type="text" required placeholder="Ismingizni kirting..." 
+                                class="bg-zinc-900/50 border border-[var(--color-border)] rounded-xl px-5 py-4 outline-none focus:border-primary transition-all text-white placeholder:text-zinc-600">
+                        </div>
+                        
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-medium text-gray-400 ml-1">Manzilingiz</label>
+                            <div class="flex">
+                                <input type="text" required placeholder="Email yoki User..." 
+                                    class="bg-zinc-900/50 border border-[var(--color-border)] rounded-l-xl px-5 py-4 outline-none focus:border-primary transition-all text-white placeholder:text-zinc-600 w-full">
+                                <select class="bg-zinc-800 border border-l-0 border-[var(--color-border)] rounded-r-xl px-2 text-xs font-semibold outline-none cursor-pointer">
+                                    <option>Email</option>
+                                    <option>Telegram</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2 mb-10 relative z-10">
+                        <label class="text-sm font-medium text-gray-400 ml-1">Izohingiz</label>
+                        <textarea required rows="4" placeholder="Xabaringizni yozing..." 
+                            class="bg-zinc-900/50 border border-[var(--color-border)] rounded-xl px-5 py-4 outline-none focus:border-primary transition-all text-white placeholder:text-zinc-600 resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" 
+                        class="bg-primary hover:bg-emerald-600 text-white font-extrabold py-4 px-12 rounded-xl transition-all active:scale-95 shadow-xl flex items-center gap-3">
+                        <span>Yuborish</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div> </body>
+</html>

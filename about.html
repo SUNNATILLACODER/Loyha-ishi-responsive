@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Haqida</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme { --color-primary: #10b981; --color-bg-dark: #121212; --color-bg-panel: #1e1e1e; --color-border: #333333; }
+        body { background-color: var(--color-bg-dark); color: white; }
+        /* Skrollbarni chiroyli qilish */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    </style>
+
+
+</head>
+<body class="flex flex-col min-h-screen lg:h-screen lg:overflow-hidden">
+    
+    <header class="h-16 border-b border-[var(--color-border)] flex items-center justify-between px-6 bg-[var(--color-bg-panel)] shrink-0 z-50 sticky top-0">
+        <img class="w-[100px]" src="FQQUe (1).jpg" alt="Logo">
+        <nav class="flex gap-4 md:gap-6 text-sm font-medium overflow-x-auto whitespace-nowrap px-2 no-scrollbar">
+            <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Bosh sahifa</a>
+            <a href="about.html" class="text-primary border-b-2 border-primary pb-1">Haqida</a>
+            <a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Loyihalar</a>
+            <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Bog'lanish</a>
+        </nav>
+    </header>
+
+    <div class="flex flex-col lg:flex-row flex-1 lg:overflow-hidden">
+        
+        <aside class="w-full lg:w-[20%] lg:min-w-[280px] bg-[var(--color-bg-panel)] border-b lg:border-b-0 lg:border-r border-[var(--color-border)] overflow-y-auto p-5 shrink-0 flex flex-col gap-5 z-10">
+            <img src="pro_developer.jpg" alt="Profile" class="object-cover w-24 lg:w-full h-auto rounded-lg mx-auto lg:mx-0 border border-[var(--color-border)]">
+            <div class="text-center lg:text-left">
+                <h2 class="text-xl font-bold leading-tight">Saripov Sunnatilla</h2>
+                <p class="text-primary text-[10px] font-bold uppercase tracking-widest mt-1">Frontend Developer</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center lg:justify-start gap-2 text-xs text-gray-300">
+                <span class="bg-[#2a2a2a] px-3 py-1.5 rounded-md border border-[#333] hover:bg-slate-600 transition-colors">Veb dasturchi</span>
+                <span class="bg-[#2a2a2a] px-3 py-1.5 rounded-md border border-[#333] hover:bg-slate-600 transition-colors">Dizayner</span>
+                <span class="bg-[#2a2a2a] px-3 py-1.5 rounded-md border border-[#333] hover:bg-slate-600 transition-colors">Junior</span>
+            </div>
+            
+            <hr class="border-[var(--color-border)] my-2">
+            
+            <div class="flex flex-col gap-4 text-sm">
+                <a href="mailto:sunnatillasharipov6@gmail.com" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors">
+                    <div class="w-10 h-10 shrink-0 rounded-lg bg-[#2a2a2a] flex items-center justify-center border border-[#333]">📧</div>
+                    <div class="truncate">
+                        <div class="font-semibold text-gray-200">E-pochta</div>
+                        <div class="text-gray-400 text-[10px] truncate">sunnatillasharipov6@gmail.com</div>
+                    </div>
+                </a>
+                <a href="https://t.me/war1pov_developer" target="_blank" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors">
+                    <div class="w-10 h-10 shrink-0 rounded-lg bg-[#2a2a2a] flex items-center justify-center border border-[#333]">✈️</div>
+                    <div>
+                        <div class="font-semibold text-gray-200">Telegram</div>
+                        <div class="text-gray-400 text-[10px]">@war1pov_developer</div>
+                    </div>
+                </a>
+                 <a href="tel:+998200077729" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors -mx-2">
+                    <div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-lg shadow-sm border border-[#333]">📞</div>
+                    <div>
+                        <div class="font-semibold text-gray-200">Telefon raqam</div>
+                        <div class="text-gray-400 text-xs mt-0.5">+998 (95) 121-42-82</div>
+                    </div>
+                </a>
+                 <a href="https://github.com/yaxyobekuz" target="_blank" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors -mx-2">
+                    <div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-lg shadow-sm border border-[#333]">💻</div>
+                    <div>
+                        <div class="font-semibold text-gray-200">Github</div>
+                        <div class="text-gray-400 text-xs mt-0.5">github.com/sunnatillacodder</div>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+        <main class="w-full lg:w-[80%] flex-1 overflow-y-auto p-6 md:p-10 lg:p-16">
+            <div class="mb-10">
+                <h1 class="font-bold text-3xl border-b-4 border-primary inline-block pb-2 hover:text-gray-400 transition-colors cursor-default">
+                    Men Haqimda
+                </h1>
+            </div>
+
+            <div class="text-gray-300 leading-relaxed">
+                <p class="text-gray-300 text-lg leading-relaxed max-w-3xl">
+                    Mening ismim <span class="text-primary font-bold">Sunnatilla Saripov</span> va men shunchaki kod yozmayman — men raqamli dunyoda foydalanuvchilar uchun qulay, estetik va intuitiv interfeyslar yarataman. 
+                    <br><br>
+                    Frontend yo'nalishidagi faoliyatim davomida men zamonaviy texnologiyalar (<span class="italic text-white">React, Tailwind CSS, JavaScript</span>) yordamida nafaqat chiroyli, balki yuqori tezlikda ishlovchi veb-ilovalarni ishlab chiqishga e'tibor qaratib kelyapman.
+                </p>
+                <a href="contact.html">
+                    <button class="w-[190px] rounded-3xl bg-green-800 py-3 my-10 font-bold hover:bg-green-500 hover:text-black transition-all shadow-lg">
+                        Bog'lanish
+                    </button>
+                </a>
+            </div>
+
+            <h1 class="font-bold text-3xl border-b-4 border-primary inline-block pb-2 mb-8">Asbob-uskunalar</h1>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-16 mb-12">
+                <img class="hover:bg-slate-400 rounded-lg transition-colors" src="card (3).png" alt="Tool">
+                <img class="hover:bg-slate-400 rounded-lg transition-colors" src="card (1).png" alt="Tool">
+                <img class="hover:bg-slate-400 rounded-lg transition-colors" src="card (2).png" alt="Tool">
+                <img class="hover:bg-slate-400 rounded-lg transition-colors" src="card (3).png" alt="Tool">
+                <img class="hover:bg-slate-400 rounded-lg transition-colors" src="card (8).png" alt="Tool">
+                <img class="hover:bg-slate-400 rounded-lg transition-colors" src="card (5).png" alt="Tool">
+                <img class="hover:bg-slate-400 rounded-lg transition-colors" src="card (7).png" alt="Tool">
+                <img class="hover:bg-slate-400 rounded-lg transition-colors" src="card (6).png" alt="Tool">
+            </div>
+
+           <h1 class="font-bold text-[32px] border-b-4 border-primary inline-block pb-2 hover:text-gray-400 transition-colors cursor-default">
+            Men nimalar qila olaman ?
+        </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+        
+        <div class="bg-[var(--color-bg-panel)] border border-[var(--color-border)] p-6 rounded-2xl flex items-start gap-4 shadow-lg cursor-pointer transition-all duration-300 hover:bg-slate-500 group">
+            <div class="w-14 h-14 bg-[#1e293b] rounded-xl flex shrink-0 items-center justify-center text-2xl transition-colors group-hover:bg-slate-600">
+                🌐
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-2">Seo</h3>
+                <p class="text-gray-400 text-sm leading-relaxed group-hover:text-white">Qidiruv tizimining natijalarida sayt reytingini yaxshilash</p>
+            </div>
+        </div>
+
+        <div class="bg-[var(--color-bg-panel)] border border-[var(--color-border)] p-6 rounded-2xl flex items-start gap-4 shadow-lg cursor-pointer transition-all duration-300 hover:bg-slate-500 group">
+            <div class="w-14 h-14 bg-[#2d1b24] rounded-xl flex shrink-0 items-center justify-center text-2xl transition-colors group-hover:bg-slate-600">
+                🎨
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-2">Dizayn</h3>
+                <p class="text-gray-400 text-sm leading-relaxed group-hover:text-white">Kuchli dizayn va kichik detallargacha e'tibor berish</p>
+            </div>
+        </div>
+
+        <div class="bg-[var(--color-bg-panel)] border border-[var(--color-border)] p-6 rounded-2xl flex items-start gap-4 shadow-lg cursor-pointer transition-all duration-300 hover:bg-slate-500 group">
+            <div class="w-14 h-14 bg-[#1b2d24] rounded-xl flex shrink-0 items-center justify-center text-2xl transition-colors group-hover:bg-slate-600">
+                💎
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-2">Sifat</h3>
+                <p class="text-gray-400 text-sm leading-relaxed group-hover:text-white">Yuqori darajada saytlarni sifatli ishlab chiqish</p>
+            </div>
+        </div>
+
+        <div class="bg-[var(--color-bg-panel)] border border-[var(--color-border)] p-6 rounded-2xl flex items-start gap-4 shadow-lg cursor-pointer transition-all duration-300 hover:bg-slate-500 group">
+            <div class="w-14 h-14 bg-[#1b272d] rounded-xl flex shrink-0 items-center justify-center text-2xl transition-colors group-hover:bg-slate-600">
+                ⚡
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-2">Tezkorlik</h3>
+                <p class="text-gray-400 text-sm leading-relaxed group-hover:text-white">Qisqa muddat ichida tezkor sayt ishlab chiqish</p>
+            </div>
+        </div>
+            </div>
+        </main>
+    </div>
+
+
+
+   
+
+</body>
+</html>

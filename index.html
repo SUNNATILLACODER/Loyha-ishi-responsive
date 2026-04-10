@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharipov Sunnatilla | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme { 
+            --color-primary: #10b981; 
+            --color-bg-dark: #0a0a0a; 
+            --color-bg-panel: rgba(30, 30, 30, 0.7); 
+            --color-border: #333333; 
+        }
+        body { background-color: var(--color-bg-dark); color: white; margin: 0; overflow: hidden; }
+        
+        /* Orqa fon qatlami */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1; /* Orqa fonda turishi uchun */
+        }
+
+        /* Kontent orqa fondan ustun turishi uchun */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+            background: transparent;
+        }
+
+        /* Glassmorphism effekti (shaffof panel) */
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="flex flex-col h-screen">
+
+    <div id="particles-js"></div>
+
+    <div class="content-wrapper flex flex-col h-full">
+        <header class="h-16 border-b border-[var(--color-border)] flex items-center justify-between px-6 glass-panel shrink-0">
+            <img class="w-[100px] animate__animated animate__fadeInLeft" src="FQQUe (1).jpg" alt="Logo">
+            <nav class="flex gap-6 text-sm font-medium animate__animated animate__fadeInDown">
+                <a href="index.html" class="text-primary border-b-2 border-primary pb-1">Bosh sahifa</a>
+                <a href="about.html" class="text-gray-400 hover:text-white transition-all">Haqida</a>
+                <a href="projects.html" class="text-gray-400 hover:text-white transition-all">Loyihalar</a>
+                <a href="contact.html" class="text-gray-400 hover:text-white transition-all">Bog'lanish</a>
+            </nav>
+        </header>
+
+       <div class="flex flex-col lg:flex-row flex-1 lg:overflow-hidden">
+        <aside class="w-full lg:w-[20%] lg:min-w-[280px] bg-[var(--color-bg-panel)] border-b lg:border-r border-[var(--color-border)] p-5 overflow-y-auto shrink-0">
+            <img class="w-24 lg:w-full rounded-3xl mx-auto lg:mx-0 border border-[var(--color-border)]" src="pro_developer.jpg" alt="Me">
+            <div class="mt-4 text-center lg:text-left py-5">
+                <h2 class="text-lg font-bold uppercase leading-tight">Sharipov Sunnatilla</h2>
+                <p class="text-primary text-[10px] font-bold mt-1 uppercase">FRONTEND DEVELOPER</p>
+            </div>
+             <div class="flex flex-wrap gap-2 text-xs text-gray-300 py-5">
+                <span class="bg-[#2a2a2a] px-3 py-1.5 rounded-md border border-[#333] hover:bg-slate-500">Veb dasturchi</span>
+                <span class="bg-[#2a2a2a] px-3 py-1.5 rounded-md border border-[#333] hover:bg-slate-500">Odam</span>
+                <span class="bg-[#2a2a2a] px-3 py-1.5 rounded-md border border-[#333] hover:bg-slate-500">Dizayner</span>
+                <span class="bg-[#2a2a2a] px-3 py-1.5 rounded-md border border-[#333] hover:bg-slate-500">Junior</span>
+            </div>
+                 <div class="flex flex-col gap-4 text-sm">
+                    <a href="mailto:pubgn9642@gmail.com" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors -mx-2">
+                        <div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-lg shadow-sm border border-[#333]">📧</div>
+                        <div>
+                            <div class="font-semibold text-gray-200">E-pochta</div>
+                            <div class="text-gray-400 text-xs mt-0.5">sunnatillasharipov6@gmail.com</div>
+                        </div>
+                    </a>
+                   <a href="https://t.me/mryaxyobek" target="_blank" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors -mx-2">
+                    <div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-lg shadow-sm border border-[#333]">✈️</div>
+                    <div>
+                        <div class="font-semibold text-gray-200">Telegram</div>
+                        <div class="text-gray-400 text-xs mt-0.5">@war1pov_developer</div>
+                    </div>
+                </a>
+            <a href="tel:+998200077729" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors -mx-2">
+                    <div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-lg shadow-sm border border-[#333]">📞</div>
+                    <div>
+                        <div class="font-semibold text-gray-200">Telefon raqam</div>
+                        <div class="text-gray-400 text-xs mt-0.5">+998 (95) 121-42-82</div>
+                    </div>
+                </a>
+ <a href="https://github.com/yaxyobekuz" target="_blank" class="flex items-center gap-3 hover:bg-[#2a2a2a] p-2 rounded-lg transition-colors -mx-2">
+                        <div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-lg shadow-sm border border-[#333]">💻</div>
+                        <div>
+                            <div class="font-semibold text-gray-200">Github</div>
+                            <div class="text-gray-400 text-xs mt-0.5">github.com/sunnatillacodder</div>
+                        </div>
+                    </a>
+
+        </aside>
+
+
+            <main class="flex-1 flex flex-col items-center justify-center p-10 text-center relative">
+                <div class="animate__animated animate__zoomIn">
+                   <h1 class="text-2xl md:text-4xl font-bold max-w-xl z-10 leading-tight">Assalomu alaykum, Men <span class="text-green-600 ">Sharipov Sunnatilla</span>man</h1>
+            <p class="py-6 md:py-10 text-gray-400 max-w-lg z-10 text-sm md:text-base leading-relaxed">Veb dasturchi va dizayner sifatida natijaga yo'naltirilgan ishchi. Veb-saytlar yaratish va boshqarish orqali muvaffaqiyatga erishish maqsadimdir.</p>
+                    <div class="flex gap-4 justify-center">
+                        <a href="projects.html" class="bg-primary text-black font-bold px-10 py-4 rounded-full hover:scale-110 active:scale-95 transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                            Loyihalarim
+                        </a>
+                        <a href="contact.html" class="border border-white/20 px-10 py-4 rounded-full hover:bg-white hover:text-black transition-all font-bold">
+                            Bog'lanish
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#10b981" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": false },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#10b981", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 3, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" }, /* Mishka borganda yopishadi */
+                    "onclick": { "enable": true, "mode": "push" }, /* Bosganda ko'payadi */
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 200, "line_linked": { "opacity": 1 } },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
