@@ -16,15 +16,54 @@
 </head>
 <body class="flex flex-col min-h-screen lg:h-screen lg:overflow-hidden">
 
-    <header class="h-16 border-b border-[var(--color-border)] flex items-center justify-between px-6 bg-[var(--color-bg-panel)] shrink-0 z-50 sticky top-0">
-        <img class="w-[100px]" src="FQQUe (1).jpg" alt="Logo">
-        <nav class="flex gap-4 md:gap-6 text-sm font-medium overflow-x-auto no-scrollbar whitespace-nowrap px-2">
-            <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Bosh sahifa</a>
-            <a href="about.html" class="text-gray-400 hover:text-white transition-colors">Haqida</a>
-            <a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Loyihalar</a>
-            <a href="contact.html" class="text-primary border-b-2 border-primary pb-1">Bog'lanish</a>
-        </nav>
-    </header>
+   <header class="h-16 border-b border-[var(--color-border)] flex items-center justify-between px-6 bg-[var(--color-bg-panel)] shrink-0 z-[100] sticky top-0">
+    <img class="w-[100px]" src="FQQUe (1).jpg" alt="Logo">
+    
+    <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Bosh sahifa</a>
+        <a href="about.html" class="text-gray-400 hover:text-white transition-colors">Haqida</a>
+        <a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Loyihalar</a>
+        <a href="contact.html" class="text-primary border-b-2 border-primary pb-1">Bog'lanish</a>
+    </nav>
+
+    <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 z-[110] outline-none">
+        <div class="w-7 h-1 bg-white rounded-full transition-all duration-300 origin-left line1"></div>
+        <div class="w-7 h-1 bg-white rounded-full transition-all duration-300 line2"></div>
+        <div class="w-7 h-1 bg-white rounded-full transition-all duration-300 origin-left line3"></div>
+    </button>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0a0a0a]/95 backdrop-blur-xl z-[105] flex flex-col items-center justify-center gap-8 text-2xl font-bold transition-all duration-500 translate-x-full">
+        <a href="index.html" class="hover:text-primary transition-colors">Bosh sahifa</a>
+        <a href="about.html" class="hover:text-primary transition-colors">Haqida</a>
+        <a href="projects.html" class="hover:text-primary transition-colors">Loyihalar</a>
+        <a href="contact.html" class="text-primary">Bog'lanish</a>
+    </div>
+</header>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const lines = {
+        l1: document.querySelector('.line1'),
+        l2: document.querySelector('.line2'),
+        l3: document.querySelector('.line3')
+    };
+
+    menuBtn.addEventListener('click', () => {
+        // Menyuni ochish/yopish
+        mobileMenu.classList.toggle('translate-x-full');
+        
+        // Hamburger tugmasini "X" shakliga keltirish (Animatsiya)
+        lines.l1.classList.toggle('rotate-[45deg]');
+        lines.l1.classList.toggle('translate-x-1');
+        
+        lines.l2.classList.toggle('opacity-0');
+        lines.l2.classList.toggle('-translate-x-10');
+        
+        lines.l3.classList.toggle('rotate-[-45deg]');
+        lines.l3.classList.toggle('translate-x-1');
+    });
+</script>
 
     <div class="flex flex-col lg:flex-row flex-1 lg:overflow-hidden">
         

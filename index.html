@@ -3,60 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharipov Sunnatilla | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Portfolio - Index</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
-        @theme { 
-            --color-primary: #10b981; 
-            --color-bg-dark: #0a0a0a; 
-            --color-bg-panel: rgba(30, 30, 30, 0.7); 
-            --color-border: #333333; 
-        }
-        body { background-color: var(--color-bg-dark); color: white; margin: 0; overflow: hidden; }
-        
-        /* Orqa fon qatlami */
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1; /* Orqa fonda turishi uchun */
-        }
-
-        /* Kontent orqa fondan ustun turishi uchun */
-        .content-wrapper {
-            position: relative;
-            z-index: 10;
-            background: transparent;
-        }
-
-        /* Glassmorphism effekti (shaffof panel) */
-        .glass-panel {
-            background: rgba(20, 20, 20, 0.6);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+        @theme { --color-primary: #10b981; --color-bg-dark: #121212; --color-bg-panel: #1e1e1e; --color-border: #333333; }
+        body { background-color: var(--color-bg-dark); color: white; }
+        .bg-pattern { background-image: radial-gradient(#333 1px, transparent 1px); background-size: 20px 20px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body class="flex flex-col h-screen">
+<body class="flex flex-col min-h-screen lg:h-screen lg:overflow-hidden">
+   <header class="h-16 border-b border-[var(--color-border)] flex items-center justify-between px-6 bg-[var(--color-bg-panel)] shrink-0 z-[100] sticky top-0">
+    <img class="w-[100px]" src="FQQUe (1).jpg" alt="Logo">
+    
+    <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Bosh sahifa</a>
+        <a href="about.html" class="text-gray-400 hover:text-white transition-colors">Haqida</a>
+        <a href="projects.html" class="text-gray-400 hover:text-white transition-colors">Loyihalar</a>
+        <a href="contact.html" class="text-primary border-b-2 border-primary pb-1">Bog'lanish</a>
+    </nav>
 
-    <div id="particles-js"></div>
+    <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 z-[110] outline-none">
+        <div class="w-7 h-1 bg-white rounded-full transition-all duration-300 origin-left line1"></div>
+        <div class="w-7 h-1 bg-white rounded-full transition-all duration-300 line2"></div>
+        <div class="w-7 h-1 bg-white rounded-full transition-all duration-300 origin-left line3"></div>
+    </button>
 
-    <div class="content-wrapper flex flex-col h-full">
-        <header class="h-16 border-b border-[var(--color-border)] flex items-center justify-between px-6 glass-panel shrink-0">
-            <img class="w-[100px] animate__animated animate__fadeInLeft" src="FQQUe (1).jpg" alt="Logo">
-            <nav class="flex gap-6 text-sm font-medium animate__animated animate__fadeInDown">
-                <a href="index.html" class="text-primary border-b-2 border-primary pb-1">Bosh sahifa</a>
-                <a href="about.html" class="text-gray-400 hover:text-white transition-all">Haqida</a>
-                <a href="projects.html" class="text-gray-400 hover:text-white transition-all">Loyihalar</a>
-                <a href="contact.html" class="text-gray-400 hover:text-white transition-all">Bog'lanish</a>
-            </nav>
-        </header>
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0a0a0a]/95 backdrop-blur-xl z-[105] flex flex-col items-center justify-center gap-8 text-2xl font-bold transition-all duration-500 translate-x-full">
+        <a href="index.html" class="hover:text-primary transition-colors">Bosh sahifa</a>
+        <a href="about.html" class="hover:text-primary transition-colors">Haqida</a>
+        <a href="projects.html" class="hover:text-primary transition-colors">Loyihalar</a>
+        <a href="contact.html" class="text-primary">Bog'lanish</a>
+    </div>
+</header>
 
-       <div class="flex flex-col lg:flex-row flex-1 lg:overflow-hidden">
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const lines = {
+        l1: document.querySelector('.line1'),
+        l2: document.querySelector('.line2'),
+        l3: document.querySelector('.line3')
+    };
+
+    menuBtn.addEventListener('click', () => {
+        // Menyuni ochish/yopish
+        mobileMenu.classList.toggle('translate-x-full');
+        
+        // Hamburger tugmasini "X" shakliga keltirish (Animatsiya)
+        lines.l1.classList.toggle('rotate-[45deg]');
+        lines.l1.classList.toggle('translate-x-1');
+        
+        lines.l2.classList.toggle('opacity-0');
+        lines.l2.classList.toggle('-translate-x-10');
+        
+        lines.l3.classList.toggle('rotate-[-45deg]');
+        lines.l3.classList.toggle('translate-x-1');
+    });
+</script>
+
+    <div class="flex flex-col lg:flex-row flex-1 lg:overflow-hidden">
         <aside class="w-full lg:w-[20%] lg:min-w-[280px] bg-[var(--color-bg-panel)] border-b lg:border-r border-[var(--color-border)] p-5 overflow-y-auto shrink-0">
             <img class="w-24 lg:w-full rounded-3xl mx-auto lg:mx-0 border border-[var(--color-border)]" src="pro_developer.jpg" alt="Me">
             <div class="mt-4 text-center lg:text-left py-5">
@@ -101,50 +107,18 @@
 
         </aside>
 
-
-            <main class="flex-1 flex flex-col items-center justify-center p-10 text-center relative">
-                <div class="animate__animated animate__zoomIn">
-                   <h1 class="text-2xl md:text-4xl font-bold max-w-xl z-10 leading-tight">Assalomu alaykum, Men <span class="text-green-600 ">Sharipov Sunnatilla</span>man</h1>
+        <main class="w-full lg:w-[80%] flex-1 overflow-y-auto bg-pattern flex flex-col items-center justify-center text-center p-6">
+            <h1 class="text-2xl md:text-4xl font-bold max-w-xl z-10 leading-tight">Assalomu alaykum, Men <span class="text-green-600 ">Sharipov Sunnatilla</span>man</h1>
             <p class="py-6 md:py-10 text-gray-400 max-w-lg z-10 text-sm md:text-base leading-relaxed">Veb dasturchi va dizayner sifatida natijaga yo'naltirilgan ishchi. Veb-saytlar yaratish va boshqarish orqali muvaffaqiyatga erishish maqsadimdir.</p>
-                    <div class="flex gap-4 justify-center">
-                        <a href="projects.html" class="bg-primary text-black font-bold px-10 py-4 rounded-full hover:scale-110 active:scale-95 transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)]">
-                            Loyihalarim
-                        </a>
-                        <a href="contact.html" class="border border-white/20 px-10 py-4 rounded-full hover:bg-white hover:text-black transition-all font-bold">
-                            Bog'lanish
-                        </a>
-                    </div>
-                </div>
-            </main>
-        </div>
+            <a href="projects.html" class="z-10">
+                <button class="w-[170px] rounded-2xl bg-green-800 py-3 font-bold hover:bg-green-400 hover:text-black transition-all shadow-lg">Loyihalar</button>
+            </a>
+        </main>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": "#10b981" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.5, "random": false },
-                "size": { "value": 3, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#10b981", "opacity": 0.4, "width": 1 },
-                "move": { "enable": true, "speed": 3, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": { "enable": true, "mode": "grab" }, /* Mishka borganda yopishadi */
-                    "onclick": { "enable": true, "mode": "push" }, /* Bosganda ko'payadi */
-                    "resize": true
-                },
-                "modes": {
-                    "grab": { "distance": 200, "line_linked": { "opacity": 1 } },
-                    "push": { "particles_nb": 4 }
-                }
-            },
-            "retina_detect": true
-        });
-    </script>
+
+
+
+    
 </body>
 </html>
